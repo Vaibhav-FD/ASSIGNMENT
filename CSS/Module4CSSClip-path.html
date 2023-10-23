@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clip Path</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      text-decoration: none;
+      list-style: none;
+      outline: 1px solid green;
+    }
+
+    header {
+
+      background-image: url(MultiMedia/hot-air-ballon.png);
+      background-size: cover;
+      background-position: center;
+      clip-path: polygon(0 0, 100% 0%, 100% 85%, 50% 100%, 0 86%);
+      padding-bottom: 9%;
+      position: relative;
+
+    }
+
+    ul {
+      width: 75%;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-inline: auto;
+      padding: 1.5%;
+    }
+
+    ul * {
+      color: white;
+      font-weight: 690;
+    }
+
+    .navlinks {
+      width: 69%;
+      display: flex;
+      justify-content: space-around;
+      font-size: 0.9375rem;
+    }
+
+    ul>li {
+      font-size: 1.6875rem;
+      border: 2px solid white;
+      padding-inline-end: 1.2%;
+    }
+
+    ul span {
+      color: black;
+      background-color: white;
+      padding-inline: 9%;
+    }
+
+    .navlinks a:hover {
+      color: orange;
+      border-bottom: 3px solid orange;
+      padding-bottom: 0.375rem;
+    }
+
+
+
+    .headcontent {
+      width: 45%;
+      text-align: center;
+      margin-inline: auto;
+      margin-block-start: 6%;
+    }
+
+    .headcontent * {
+      color: white;
+      margin-top: 3%;
+    }
+
+
+    hr{
+      display: inline-block;
+      width: 9%;
+      margin: 0 auto;
+    }
+
+    .headcontent span{
+      color: rgb(232, 30, 30);
+    }
+
+    hgroup>p {
+      font-size: 1.3125rem;
+      word-spacing: 0.375rem;
+    }
+
+    hgroup h1 {
+      font-size: 3.375rem;
+      letter-spacing: 0.375rem;
+      word-spacing: 1.6875rem;
+    }
+
+    .headcontent>p{
+      width: 90%;
+      margin-inline: auto;
+    }
+
+    .headbt{
+      font-size: 21px;
+      font-weight: 630;
+    }
+
+    .headbt button{
+      padding: 1.2% 4.5%;
+      background-color: red;
+      border: none;
+      margin-right: 6%;
+      border-radius: 0.1875rem;
+    }
+
+    .headbt :nth-child(2){
+      background-color: transparent;
+      outline: 2px solid whitesmoke;
+    }
+
+    #leftarrow,#rightarrow{
+      position: absolute;
+      background-color: rgb(235, 36, 36);
+      color: whitesmoke;
+      font-weight: 900;
+      font-size: 1.6875rem;
+      bottom: 50%;
+
+    }
+
+    #leftarrow{
+      left: 0.6%;
+    }
+
+    #rightarrow{
+      right: 0.6%;
+    }
+    
+    #anchor{
+      display:block;
+      width: 2.9%;
+      font-size: 1.6875rem;
+      border-radius: 50%;
+      background-color: white;
+      position: absolute;
+      left: 48%;
+      bottom: -4%;
+      
+    }
+
+    
+    
+
+
+
+
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <ul>
+
+        <li><a href="#"><span>L</span>ogo</a></li>
+
+        <div class="navlinks">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT US</a></li>
+          <li><a href="#">PORTFOLIO</a></li>
+          <li><a href="#">PRICING</a></li>
+          <li><a href="#">TEAM</a></li>
+          <li><a href="#">BLOG</a></li>
+          <li><a href="#">CONTACT</a></li>
+        </div>
+      </ul>
+    </nav>
+
+    
+    <span id="leftarrow">⇐</span><span id="rightarrow">⇒</span>
+    
+    <div class="headcontent">
+      <hgroup>
+        <p>Our Clients Are Our First Priorities</p>
+        <h1>WELCOME TO SKY</h1>
+      </hgroup>
+
+      <hr><span>♦</span><hr>
+
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum laudantium aspernatur labore necessitatibus
+        officia optio tenetur reiciendis repellat, voluptatum enim ipsam soluta libero consectetur quisquam eligendi
+        ipsa distinctio dolor quos itaque repellendus cumque possimus? Magni, dolor.</p>
+
+      <div class="headbt">
+        <button>GET STARTED NOW</button><button>LEARN MORE</button>
+      </div>
+    </div>
+
+    <img src="MultiMedia/Anchor_pictogram.png" alt="anchor" id="anchor">
+
+    <div class="info">
+
+      <div class="des">
+
+      <img src="" alt="">
+
+      <h2></h2>
+
+      <hr>
+      
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel accusamus sunt! Sint quo, ipsa natus corporis hic eum itaque libero.</p>
+    
+    </div>
+
+      <div class="code">
+        
+        <img src="" alt="">
+      
+        <h2></h2>
+      
+        <hr>
+      
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel accusamus sunt! Sint quo, ipsa natus corporis hic eum itaque libero.</p>
+    
+    </div>
+
+      <div class="idea">
+        
+        <img src="" alt="">
+      
+        <h2></h2>
+      
+        <hr>
+      
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel accusamus sunt! Sint quo, ipsa natus corporis hic eum itaque libero.</p>
+    
+    </div>
+
+      <div class="free">
+        
+        <img src="" alt="">
+      
+        <h2></h2>
+      
+        <hr>
+      
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel accusamus sunt! Sint quo, ipsa natus corporis hic eum itaque libero.</p>
+    
+    </div>
+
+
+    </div>
+
+  </heade
+  
+  r
+  >
+
+
+</
+body>
+
+</html>

@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module4CSS</title>
+
+  <style>
+
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        list-style: none;
+        color-scheme: dark;
+        text-transform: capitalize;
+      }
+
+      html,body{
+        height: 100%;
+        width: 100%;
+      }
+
+      hr{
+        height: 0.9%;
+        background-color: turquoise;
+      }
+
+      details{
+        background-color: rgba(0, 0, 0, 0.1);
+        font-size: 1.6875rem;
+        font-weight: 912;
+        margin-bottom: 6.3%;
+      }
+
+  
+      p{
+        font-weight: 360;
+        font-size: 1.3125rem;
+      }
+
+      
+  </style>
+
+</head>
+
+<body>
+
+  <details>
+
+    <summary>what are the benefits of using CSS?</summary>
+
+    <p>
+      <br>
+      CSS saves time − You can write CSS once and then reuse the same sheet in multiple HTML pages. You can define a
+      style for each HTML element and apply it to as many Web pages as you want.
+      <br>
+      <br>
+      Easy maintenance − To make a global change, simply change the style, and all elements in all the web pages will be
+      updated automatically.
+      <br>
+      <br>
+      Global web standards − Now HTML attributes are being deprecated and it is being recommended to use CSS. So it's a
+      good idea to start using CSS in all the HTML pages to make them compatible with future browsers.
+      <br>
+      <br>
+      Platform Independence − The Script offer consistent platform independence and can support latest browsers as well.
+    </p>
+
+  </details>
+  <hr>
+
+
+
+  <details>
+
+    <summary>what are the disadvantages of using CSS?</summary>
+
+    <p>
+      <br>
+      Cross-browser compatibility issues. What works with one browser might not always work with another, so web
+      developers need to test for compatibility across multiple browsers.
+
+      <br><br>
+      Confusion due to its many levels. CSS has many levels, which can be complicated for non-developers and beginners.
+      <br><br>
+
+      Fixing not only one CSS file but also HTML tags associated with CSS selectors is often necessary.
+      <br><br>
+
+      Different layout display.
+      Vulnerability.
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>What is the difference between CSS2 and CSS3?</summary>
+
+    <p>
+      <br>
+      CSS2 and CSS3 are both versions of the Cascading Style Sheets (CSS) language, but there are some key differences
+      between the two.
+
+      <br><br>
+      <br>
+
+      CSS2 was released in 1998 and is considered to be a stable and mature version of the language. It includes
+      features such as support for media types, cascading and inheritance, and selectors.
+      <br><br>
+      CSS3, on the other hand, is the latest version of the language and was first introduced in 1999. It includes new
+      features such as animations, transitions, and new selectors. It also includes support for responsive design and
+      new layout modules such as Flexbox and Grid. CSS3 also allows for better accessibility and more control over
+      typography.
+      <br><br>
+      Additionally, CSS3 is not a singular monolithic release, it is a series of individual modules that are updated and
+      released as they reach a certain level of maturity.
+      <br><br>
+      In summary, CSS3 includes new features and capabilities that were not present in CSS2, making it more powerful and
+      versatile for web design and development.
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>name a few CSS style components</summary>
+    <br><br>
+
+    <p>
+      color <br>
+      background-color <br>
+      background-image <br>
+      position <br>
+      display
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what do you understand by CSS opacity?</summary>
+    <br><br>
+
+    <p>opacity is the property which is used for set the transparency of element or to decide how much it will be blur.
+    </p>
+
+  </details>
+  <hr>
+
+
+
+  <details>
+
+    <summary>how can the background color of an element be changed?</summary>
+    <br><br>
+
+
+    <p>by using <br>
+      background-color =property.</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>how can image repetition of backup be controlled?</summary>
+    <br><br>
+
+
+    <p>
+      we can use <br>
+      background-repeat property to control it <br>
+      it has 6 values <br>
+      repeat , no-repeat , repeat-x ,repeat-y ,space , round.
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is the use of background-position propety?</summary>
+    <br><br>
+
+
+    <p>we can set the position of background-image by giving values top , bottom , left ,right , center we can also
+      combaine 2 values like top right , center bottom and we can give numeric values which will use first value on
+      x-axis and second value on y-axis.</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>which property controls the image scroll in the background?</summary>
+    <br><br>
+
+
+    <p>
+      background-attachment: fixed;<br>
+      this propety controls the image scroll in the background.
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>why should background and color be used as seperate properties?</summary>
+    <br><br>
+
+
+    <p>because they both are Different properties. <br>
+      color is a property for text color where as background is a shorthand property.</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>how to center block elemennts using CSS1?</summary>
+    <br><br>
+
+
+    <p>there are multiple ways to center block element but most common and easy way is margin.
+      <br>first set width and then give margin:0 auto;
+    </p>
+
+  </details>
+
+  <hr>
+
+
+  <details>
+
+    <summary>how to maintain the CSS specifications?</summary>
+    <br><br>
+
+
+    <p>by seperating all the content and code and class name.</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what are the ways to integrate CSS as a web page?</summary>
+    <br><br>
+
+
+    <p>there are 3 ways to integrate css <br>1.Inline CSS <br>2.Internal CSS <br>3.External CSS</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is embedded style sheet?</summary>
+    <br><br>
+
+
+    <p>embedded style sheet also known as internla style sheet in this method we use &lt;style&gt; tag inside
+      &lt;head&gt; tag and write the css rules.</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what are the external style sheets?</summary>
+    <br><br>
+
+
+    <p>external style sheet is a type of style sheet where we use seperate style sheet .css file and link it with html
+      with the help of &lt;link&gt; tag.</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what are the advantages and disadvantages of using external style sheets?</summary>
+    <br><br>
+
+
+    <h3>advantages</h3>
+
+      <p>Using them, the styles of multiple documents can be controlled from one file.</p>
+      <p>Classes can be created for use on multiple HTML element types in many documents.</p>
+      <p>In complex situations, selector and grouping methods can be used to apply styles.</p>
+
+ 
+      <br><br>
+
+    <h3>disadvantages</h3>
+   
+      <p> In order to import style information for each document, an extra download is needed.</p>
+      <p>Until the external style sheet is loaded, it may not be possible to render the document.</p>
+      <p>For small number of style definitions, it is not viable.</p>
+
+    
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is the meaning of the CSS selector?</summary>
+    <br><br>
+
+
+    <p>selector is one kinf of pointer that points towards the html element.</p>
+   
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what are the media types allowed by CSS? </summary>
+    <br><br>
+
+
+    <p>1.all <br>2.print <br>3.screen <br>4.speech</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is the rule set? </summary>
+    <br><br>
+
+
+    <p>A rule set in CSS is a statement that tells browsers how to render particular elements on an HTML page.</p>
+
+  </details>
+
+  <hr>
+
+
+</body>
+
+</html>
