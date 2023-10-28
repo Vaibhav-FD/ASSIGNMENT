@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid</title>
+  <style>
+
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+ 
+    }
+    body{
+      padding: 2.1%;
+      background-color: black;
+    }
+    h1{
+      color: white;
+      font-size: 54px;
+      text-align: center;
+    }
+    #grid{
+      display: grid;
+      grid-template-columns: repeat(6,1fr);
+      grid-template-rows: repeat(4,1fr);
+      gap: 1.2%;
+    }
+    img{
+      width: 100%;
+      height: 270px;
+    }
+    .a{
+      grid-column: 1/5;
+    }
+    .b{
+      grid-column: 5/7;
+    }
+    .c{
+      grid-area: 2/1/3/2;
+    }
+    .d{
+      grid-area: 2/2/3/6;
+    }
+    .e{
+      grid-area: 2/6/3/7;
+    }
+    .f{
+      grid-area: 3/1/4/4;
+    }
+    .g{
+      grid-area: 3/4/4/7;
+    }
+    .h{
+      grid-area: 4/1/5/3;
+    }
+    .i{
+      grid-area: 4/3/5/5;
+    }
+    .j{
+      grid-area: 4/5/5/7;
+    }
+    
+  </style>
+</head>
+<body>
+
+
+  <h1>GRID</h1>
+
+  <div id="grid">
+
+
+    <img src="https://th.bing.com/th/id/R.9e4968ad07632c9ba5a1180ca3689e60?rik=XTS4jaY12q5%2f8Q&riu=http%3a%2f%2fwallpapercave.com%2fwp%2fnsu3cSp.jpg&ehk=r6S5dxn%2fMOlEelz3NkjBAzbLWSH70w5hsFwj0M0xZWg%3d&risl=&pid=ImgRaw&r=0" alt="" class="a">
+    
+    <img src="https://images.pexels.com/photos/236047/pexels-photo-236047.jpeg?cs=srgb&dl=clouds-cloudy-countryside-236047.jpg&fm=jpg" alt="" class="b">
+    
+    <img src="https://wallpapercave.com/wp/wp2599594.jpg" alt="" class="c">
+    
+    <img src="https://th.bing.com/th/id/OIP.4rdrp31fAgY6X2ArnGKHkgHaE8?pid=ImgDet&w=1024&h=684&rs=1" alt="" class="d">
+    
+    <img src="https://th.bing.com/th/id/OIP.xJL1wu5e2to6klrLX-JKDQHaEo?w=281&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="" class="e">
+    
+    <img src="https://th.bing.com/th/id/OIP.90Z1UP48XlyPkR23rPyUqgHaEy?pid=ImgDet&rs=1" alt="" class="f">
+    
+    <img src="https://th.bing.com/th/id/OIP.PcX5mOVMNF6P3LafvjBAUQHaE7?pid=ImgDet&rs=1" alt="" class="g">
+    
+    <img src="https://th.bing.com/th/id/OIP.iVALM1gK4ludxS1aef_gDQHaEo?pid=ImgDet&rs=1" alt="" class="h">
+    
+    <img src="https://th.bing.com/th/id/R.e24b400ad30f9319c965bd551fd156fb?rik=Ia3G8mfc9SH3Vw&riu=http%3a%2f%2f2.bp.blogspot.com%2f-I91kB3xYppQ%2fTZDPvc-ilzI%2fAAAAAAAABvw%2fJQBz0_8E_I4%2fs1600%2fNatural%2bScenes%2b%2525286%252529.jpg&ehk=ZjjZMPPC76KCZz27ZD1BhaYYyg9YjnCVqCkmKlvY%2bKg%3d&risl=&pid=ImgRaw&r=0" alt="" class="i">
+    
+    <img src="https://th.bing.com/th/id/R.9bcf216ba66d755d01307dd6e62e58b4?rik=Jrd94WgAuN8Ohw&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fc%2f7%2f1%2f460702.jpg&ehk=Nv7Yrbgxp8%2feoSXfYXHknPBkG%2bGt7Ytdwg%2bl0nYhpi0%3d&risl=&pid=ImgRaw&r=0" alt="" class="j">
+
+
+  </div>
+
+
+
+  
+</body>
+</html>

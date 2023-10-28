@@ -4,6 +4,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Clip Path</title>
   <style>
     * {
@@ -12,8 +15,11 @@
       box-sizing: border-box;
       text-decoration: none;
       list-style: none;
-      outline: 1px solid green;
     }
+
+
+
+
 
     header {
 
@@ -23,7 +29,7 @@
       clip-path: polygon(0 0, 100% 0%, 100% 85%, 50% 100%, 0 86%);
       padding-bottom: 9%;
       position: relative;
-
+      overflow: visible;
     }
 
     ul {
@@ -80,13 +86,13 @@
     }
 
 
-    hr{
+    hr {
       display: inline-block;
       width: 9%;
       margin: 0 auto;
     }
 
-    .headcontent span{
+    .headcontent span {
       color: rgb(232, 30, 30);
     }
 
@@ -101,17 +107,17 @@
       word-spacing: 1.6875rem;
     }
 
-    .headcontent>p{
+    .headcontent>p {
       width: 90%;
       margin-inline: auto;
     }
 
-    .headbt{
+    .headbt {
       font-size: 21px;
       font-weight: 630;
     }
 
-    .headbt button{
+    .headbt button {
       padding: 1.2% 4.5%;
       background-color: red;
       border: none;
@@ -119,12 +125,13 @@
       border-radius: 0.1875rem;
     }
 
-    .headbt :nth-child(2){
+    .headbt :nth-child(2) {
       background-color: transparent;
       outline: 2px solid whitesmoke;
     }
 
-    #leftarrow,#rightarrow{
+    #leftarrow,
+    #rightarrow {
       position: absolute;
       background-color: rgb(235, 36, 36);
       color: whitesmoke;
@@ -134,37 +141,52 @@
 
     }
 
-    #leftarrow{
+    #leftarrow {
       left: 0.6%;
     }
 
-    #rightarrow{
+    #rightarrow {
       right: 0.6%;
     }
-    
-    #anchor{
-      display:block;
+
+    #anchor {
+      display: block;
       width: 2.9%;
       font-size: 1.6875rem;
       border-radius: 50%;
       background-color: white;
       position: absolute;
-      left: 48%;
-      bottom: -4%;
-      
+      left: 48.5%;
+      bottom: 3%;
     }
+    .flex{
+      width: 81%;
+      margin-top: 6%;
+      display: flex;
+      margin-inline: auto;
+      text-align: center;
+      gap: 9%;
+    }
+    hr{
+      display: block;
+      width: 20%;
+      margin-block: 5.4%;
 
-    
-    
-
-
-
+    }
+    i{
+      font-size: 36px;
+    }
+    h1{
+      margin-top: 3%;
+      font-size: 18px;
+    }
 
   </style>
 </head>
 
 <body>
   <header>
+
     <nav>
       <ul>
 
@@ -182,16 +204,17 @@
       </ul>
     </nav>
 
-    
+
     <span id="leftarrow">⇐</span><span id="rightarrow">⇒</span>
-    
+
     <div class="headcontent">
       <hgroup>
         <p>Our Clients Are Our First Priorities</p>
         <h1>WELCOME TO SKY</h1>
       </hgroup>
 
-      <hr><span>♦</span><hr>
+      <hr><span>♦</span>
+      <hr>
 
       <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum laudantium aspernatur labore necessitatibus
         officia optio tenetur reiciendis repellat, voluptatum enim ipsam soluta libero consectetur quisquam eligendi
@@ -202,68 +225,52 @@
       </div>
     </div>
 
-    <img src="MultiMedia/Anchor_pictogram.png" alt="anchor" id="anchor">
 
-    <div class="info">
 
-      <div class="des">
+  </header>
+  <img src="MultiMedia/Anchor_pictogram.png" alt="anchor" id="anchor">
 
-      <img src="" alt="">
 
-      <h2></h2>
+  <div class="flex">
 
+    <div>
+      <i class="fa-solid fa-infinity" style="color: #f26202;"></i>
+      <h1>SEEK DESIGNS</h1>
       <hr>
-      
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel accusamus sunt! Sint quo, ipsa natus corporis hic eum itaque libero.</p>
-    
-    </div>
-
-      <div class="code">
-        
-        <img src="" alt="">
-      
-        <h2></h2>
-      
-        <hr>
-      
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel accusamus sunt! Sint quo, ipsa natus corporis hic eum itaque libero.</p>
-    
-    </div>
-
-      <div class="idea">
-        
-        <img src="" alt="">
-      
-        <h2></h2>
-      
-        <hr>
-      
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel accusamus sunt! Sint quo, ipsa natus corporis hic eum itaque libero.</p>
-    
-    </div>
-
-      <div class="free">
-        
-        <img src="" alt="">
-      
-        <h2></h2>
-      
-        <hr>
-      
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veritatis vel accusamus sunt! Sint quo, ipsa natus corporis hic eum itaque libero.</p>
-    
-    </div>
-
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint suscipit quasi quaerat amet similique asperiores,
+        soluta, exercitationem illo rerum, id enim?</p>
 
     </div>
 
-  </heade
-  
-  r
-  >
+
+    <div>
+      <i class="fa-solid fa-infinity" style="color: #f26202;"></i>
+      <h1>CLEAN CODE</h1>
+      <hr>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, numquam a beatae cum repellat obcaecati.
+        Accusamus aliquid recusandae nulla voluptates unde.</p>
+    </div>
+
+    <div>
+      <i class="fa-regular fa-lightbulb" style="color: #ee7a1b;"></i>
+      <h1>CREATIVE IDEAS</h1>
+      <hr>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, numquam a beatae cum repellat obcaecati.
+        Accusamus aliquid recusandae nulla voluptates unde.</p>
+    </div>
+
+    <div>
+      <i class="fa-regular fa-lightbulb" style="color: #ee7a1b;"></i>
+      <h1>FREE SUPPORT</h1>
+      <hr>
+      <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eaque, numquam a beatae cum repellat obcaecati.
+        Accusamus aliquid recusandae nulla voluptates unde.</p>
+    </div>
+
+  </div>
 
 
-</
-body>
+
+</body>
 
 </html>
