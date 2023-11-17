@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registaration Form</title>
+  <link rel="stylesheet" href="style.css">   <!--EXTERNAL STYLESHEET-->            
+  <link rel="shortcut icon" href="fav.ico" type="image/x-icon">
+  <!--FAV ICON-->
+</head>
+
+<body>
+
+  <div class="heading">      <!--WRAPPER-->
+
+    <h1>Student Registaration Form</h1>    
+    <!-- HEADING -->
+
+  </div>
+
+
+
+
+  <div class="form">       <!--WRAPPER-->        
+
+
+    <form action="#" method="post" enctype="application/x-www-form-urlencoded">
+
+      <!-- FORM WITH POST METHOD AND ENCTYPE TO MAKE IT SECURE  -->
+
+
+      <div>
+
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" placeholder="Enter Your First Name" minlength="3" maxlength="6"
+          pattern="[A-Za-z]{3,6}">
+
+          <!-- USING MIN AND MAX LENTGH ATTRIBUTE TO SET VALUES AND GIVING PATTERN SO THAT IT CAN NOT ACCEPT NUMBERS AND SYMBOLS -->
+
+      </div>
+
+      <div>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" placeholder="Enter Your Last Name" minlength="3" maxlength="6"
+        pattern="[A-Za-z]{3,6}">
+
+          <!-- SAME LIKE FIRST NAME-->
+
+      </div>
+
+
+      <div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="It Should Contain @...">
+
+      </div>
+
+      
+      <div>
+
+        <label for="monumber">Mobile:</label>
+        <input type="tel" id="monumber" placeholder="Only 10 Digits Are Allowed" maxlength="10" pattern="[0-9]{10}"
+          inputmode="tel">
+
+
+          <!-- SETTING MAX LENGTH OF THIS INPUT FIELD TO 10 AND ALSO FIXING PATTERN SO THAT IT CAN NOT ACCEPT LETTERS AND SYMBOLS I ALSO USE INPUT MODE GLOBAL ATTRIBUTE TO GIVE BETTE USER EXEPERINCE TO THE MOBILE USERS THIS WILL ONLY OPEN THE NUMERIC KEYBOARD IN MOBILES -->
+
+      </div>
+
+
+      <div>
+
+        <label for="gender">Gender:</label>
+
+        <div>
+
+        <span>
+        <input type="radio" name="genders" id="male">
+        <label for="male">Male</label>
+      </span>
+      <span>
+        <input type="radio" name="genders" id="female">
+        <label for="female">Female</label>
+      </span>
+
+    </div>
+      </div>
+
+
+      <div>
+
+        <label for="dob">Date Of Birth:</label>
+        <input type="date" name="dob" id="dob">
+
+      </div>
+
+
+      <div>
+
+        <label for="address">Address:</label>
+        <textarea name="address" id="address" cols="71" rows="12"></textarea>
+
+      </div>
+
+
+      <div>
+
+        <label for="city">City:</label>
+        <input type="text" name="city" id="city">
+
+      </div>
+
+
+      <div>
+
+        <label for="pin">Area PIN:</label>
+        <input type="number" id="pin" pattern="[0-9] {6}" maxlength="6">
+
+      </div>
+
+
+      <div>
+
+        <label for="state">State:</label>
+        <input type="text" id="state">
+
+      </div>
+
+
+      <div>
+
+        <label for="qualification">Qualification:</label>
+
+        <select name="qualification" id="qualification">
+
+          <option value="#" disabled selected>Select Qualification</option>
+          <!-- BY USING DISABLED AND SELECTED I AM TRYING TO MAKE BETTER USER EXPERINCE -->
+          <option value="bca">BCA</option>
+          <option value="mca">MCA</option>
+          <option value="btech">B.TECH</option>
+          <option value="mtech">M.TECH</option>
+        </select>
+
+      </div>
+
+
+      <div>
+
+        <label for="spec">Specialization:</label>
+
+        <div>
+        <input type="checkbox" name="cs" id="cs">
+        <label for="cs">Computer Science</label>
+        <br>
+        <input type="checkbox" name="it" id="it">
+        <label for="it">Information Technology</label>
+        <br>
+        <input type="checkbox" name="ca" id="ca">
+        <label for="ca">Computer Architecture</label>
+        <br>
+        <input type="checkbox" name="tc" id="tc">
+        <label for="tc">Tele Communication</label>
+      </div>
+
+      </div>
+
+
+      <div>
+
+        <label for="password">Password:</label>
+        <input type="password" name="password" id="password" required>
+
+        <!-- EVERY USER SHOULD FILL THIS FIELD OTHERWISE THE FORM WILL NOT BE SUBMITED I USE REQUIRED ATTRIBUTE TO DO THIS -->
+        
+      </div>
+
+
+      <div>
+
+        <div>
+        <input type="submit" value="Registered">
+        </div>
+
+      </div>
+
+
+    </form>
+
+
+  </div>
+
+
+
+
+</body>
+
+</html>

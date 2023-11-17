@@ -1,0 +1,45 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.heading{
+  text-align: center;
+  color: red;
+  font-size: 0.9375rem;
+  text-decoration: underline red solid 2px;
+  padding-block: 0.5rem;
+}
+
+.form{
+  background-color: rgba(202, 201, 201, 0.45);
+  padding: 1rem;
+}
+
+.form form>div{
+  display: flex;
+  width: 60%;
+  margin-bottom: 0.5rem;
+}
+
+.form form>div>input{
+  width: 72.9%;
+  padding: 0.2rem;
+}
+.form form>div>label{
+  width: 27.1%;
+  padding: 0.2rem;
+
+}
+
+input[type="submit"]{
+  background-color: limegreen;
+  color: white;
+  border: none;
+  padding: 0.6rem;
+}
+
+
