@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Marksheet Of Iformation Technology</title>
+  <style>
+    * {
+      font-family: Arial, Helvetica, sans-serif;
+      color-scheme: dark;
+    }
+
+    ol>div {
+      width: 54%;
+      display: flex;
+      justify-content: space-between;
+      margin-block: 1rem;
+      font-size: 1.2rem;
+    }
+
+    h1,h2 {
+      text-align: center;
+      margin-bottom: 2.1%;
+    }
+
+    ol input {
+      width: 69%;
+      font-size: 1.2rem;
+    }
+
+    button {
+      margin-block: 3rem;
+      margin-left: 45%;
+      padding: 1rem;
+      font-size: 1rem;
+    }
+
+    button~p {
+      font-size: 1.2rem;
+    }
+
+    b {
+      color: turquoise;
+    }
+
+    #msg {
+      text-align: center;
+      font-size: 2rem;
+      color: red;
+      background-color: whitesmoke;
+    }
+
+    input:out-of-range {
+      outline: 6px solid lightskyblue;
+      background-color: crimson;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+      appearance: none;              
+      -webkit-appearance: none;
+      /* NOT SUPPORTED IN FIREFOX */
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>MARKSHEET FOR INFORMATION TECHNOLOGY</h1>
+
+  <h2>ENTER MARKS</h2>
+
+
+
+
+  <ol>
+
+    <div>
+      <li>HTML</li><input type="number" name="html" id="html" max="50" min="0" maxlength="2" pattern="[0-9]{2}"
+        title="Marks Must Be Between 0 To 50" placeholder="Enter Your Marks">
+    </div>
+
+    <div>
+      <li>CSS</li><input type="number" name="css" id="css" max="50" min="0" maxlength="2" pattern="[0-9]{2}"
+        title="Marks Must Be Between 0 To 50" placeholder="Enter Your Marks">
+    </div>
+
+    <div>
+      <li>JAVA SCRIPT</li><input type="number" name="js" id="js" max="50" min="0" maxlength="2" pattern="[0-9]{2}"
+        title="Marks Must Be Between 0 To 50" placeholder="Enter Your Marks">
+    </div>
+
+    <div>
+      <li>PYTHON</li><input type="number" name="python" id="python" max="50" min="0" maxlength="2" pattern="[0-9]{2}"
+        title="Marks Must Be Between 0 To 50" placeholder="Enter Your Marks">
+    </div>
+
+    <div>
+      <li>C LANGUAGE</li><input type="number" name="c" id="c" max="50" min="0" maxlength="2" pattern="[0-9]{2}"
+        title="Marks Must Be Between 0 To 50" placeholder="Enter Your Marks">
+    </div>
+
+    <div>
+      <li>RUST</li> <input type="number" name="rust" id="rust" max="50" min="0" maxlength="2" pattern="[0-9]{2}"
+        title="Marks Must Be Between 0 To 50" placeholder="Enter Your Marks">
+    </div>
+
+    <div>
+      <li>PHP</li> <input type="number" name="php" id="php" max="50" min="0" maxlength="2" pattern="[0-9]{2}"
+        title="Marks Must Be Between 0 To 50" placeholder="Enter Your Marks">
+    </div>
+
+  </ol>
+
+
+  <button type="button" onclick="RESULT()" id="result">RESULT</button>
+
+
+  <p>TOTAL IS : <b id="total"></b> / 350</p>
+
+  <p>PERCENATGE IS : <b id="per"></b> %</p>
+
+
+  <script>
+
+    function RESULT() {
+
+
+      let a = Number(document.getElementById("html").value);
+      let b = Number(document.getElementById("css").value);
+      let c = Number(document.getElementById("js").value);
+      let d = Number(document.getElementById("python").value);
+      let e = Number(document.getElementById("c").value);
+      let f = Number(document.getElementById("rust").value);
+      let g = Number(document.getElementById("php").value);
+
+      let total = a + b + c + d + e + f + g;
+
+      if (total <= 350 && total >= 0) {
+
+        document.getElementById("total").innerHTML = total;
+        document.getElementById("total").style.fontSize = "1.5rem";
+
+        document.getElementById("per").innerHTML = total / 7 * 2;
+        document.getElementById("per").style.fontSize = "1.5rem";
+
+      }
+
+      else {
+        window.alert("NOT POSSIBLE , TOTAL MARKS MUST BE BETWEEN 0 TO 350")
+      }
+
+
+    }
+
+
+  </script>
+
+</body>
+
+</html>
