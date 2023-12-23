@@ -103,37 +103,38 @@
 
   <script>
 
+      
     function add() {
-      let num1 = Number(document.getElementById("num1").value);
-      let num2 = Number(document.getElementById("num2").value);
-      document.getElementById('ans').innerHTML = "ADDITION OF " + num1 + " AND " + num2 + " IS = " + (num1 + num2);  
+      let num1 = document.getElementById("num1").value;
+      let num2 = document.getElementById("num2").value;
+      document.getElementById('ans').innerHTML = "ADDITION OF " + num1 + " AND " + num2 + " IS = " + (+num1 + +num2);  
       document.getElementById('ans').style.color = "blueviolet";  
     }
 
     function sub() {
-      let num1 = Number(document.getElementById("num1").value);
-      let num2 = Number(document.getElementById("num2").value);
+      let num1 = document.getElementById("num1").value;
+      let num2 = document.getElementById("num2").value;
       document.getElementById('ans').innerHTML = "SUBTRACTION OF " + num1 + " AND " + num2 + " IS = " + (num1 - num2);
       document.getElementById('ans').style.color = "blueviolet";  
     }
 
     function mul() {
-      let num1 = Number(document.getElementById("num1").value);
-      let num2 = Number(document.getElementById("num2").value);
+      let num1 = document.getElementById("num1").value;
+      let num2 = document.getElementById("num2").value;
       document.getElementById('ans').innerHTML = "MULTIPLICATION OF " + num1 + " AND " + num2 + " IS = " + (num1 * num2);
       document.getElementById('ans').style.color = "blueviolet";  
     }
 
     function div() {
-      let num1 = Number(document.getElementById("num1").value);
-      let num2 = Number(document.getElementById("num2").value);
+      let num1 = document.getElementById("num1").value;
+      let num2 = document.getElementById("num2").value;
       document.getElementById('ans').innerHTML = "DIVISION OF  " + num1 + "  AND " + num2 + " IS = " + (num1 / num2);
       document.getElementById('ans').style.color = "blueviolet";  
     }
 
     function mod() {
-      let num1 = Number(document.getElementById("num1").value);
-      let num2 = Number(document.getElementById("num2").value);
+      let num1 = document.getElementById("num1").value;
+      let num2 = document.getElementById("num2").value;
       document.getElementById('ans').innerHTML = "MODULO OF " + num1 + " AND " + num2 + " IS = " + (num1 % num2);
       document.getElementById('ans').style.color = "blueviolet";  
     }
