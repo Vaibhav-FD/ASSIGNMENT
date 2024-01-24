@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Module-6-JS-Questions</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color-scheme: dark;
+      list-style-type: none;
+      text-transform: capitalize;
+    }
+    body{
+      background-color: rgb(41, 38, 38);
+    }
+    hr{
+      background-color: lightsalmon;
+      height: 0.9vh;
+      margin-block: 1rem 3.9rem;
+    }
+    summary{
+      font-size: 2.1rem;
+      margin-block: 2rem;
+      margin-left: 1rem;
+      font-weight: 912;
+    }
+    details p,code,pre{
+      margin-left: 1rem;
+    }
+    details *:not(summary){
+      font-size: 1.5rem;
+      color: aqua;
+      word-spacing: 9px;
+      line-height: 1.5;
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <details>
+
+    <summary>what is java script ?</summary>
+
+    <p>JavaScript is a programming language that is used to add dynamic functionality and complex features like
+      interactivity , It is a scripting language that enables you to create dynamically updating content, control
+      multimedia, animate images, and pretty much everything else.
+
+      <br><br>
+
+      In simpler terms, JavaScript is a language that allows developers to create interactive web pages that respond to
+      user actions, without requiring the page to be reloaded from the server. It is a client-side language, meaning
+      that it runs on the user’s computer rather than on the server.
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is the use of isNaN function ?</summary>
+
+    <p>The isNaN() function is used to check whether a given value is an illegal number or not. It returns true if the
+      value is a NaN (Not-a-Number) and false otherwise</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is negetive infinity ?</summary>
+
+    <p>Negative infinity in JavaScript is a constant value that represents the lowest possible number. <br><br>
+      when we we divide any negetive number with 0 it returms negetive infinity.
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>which company developed java script ?</summary>
+
+    <p>
+      JavaScript was developed by Brendan Eich in 1995, when he was working for Netscape Communications Corporation.
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what are undeclared and undefined variables ?</summary>
+
+    <p>
+      An undeclared variable is one that does not exist in the program at all. It has not been declared with the var,
+      let, or const keyword. Trying to access an undeclared variable will result in a ReferenceError.
+      <br><br>
+      An undefined variable is one that has been declared, but has not been assigned any value. The default value of an
+      unassigned variable
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>write the code for adding new element dynamically ?</summary>
+
+
+
+    <pre>
+
+        &lt;script&gt;
+          function addPara() {
+    
+            let node = document.createElement("h2");
+    
+            let textNode = document.createTextNode("Dynamically Created Element.");
+    
+            node.appendChild(textNode);
+    
+            document.getElementById("heading").appendChild(node);
+    
+          }
+        &lt;/script&gt;
+    
+      </pre>
+
+
+    <button id="btn" onclick="addPara()">Creating Element Dynamically</button>
+    <br><br>
+    <div id="heading">ELEMENTS</div>
+
+    <script>
+      function addPara() {
+
+        let node = document.createElement("h2");
+
+        let textNode = document.createTextNode("Dynamically Created Element.");
+
+        node.appendChild(textNode);
+
+        document.getElementById("heading").appendChild(node);
+
+      }
+    </script>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is the difference between viewState and SessionState ?</summary>
+
+    <p></p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is === operator ?</summary>
+
+    <p>The === operator in JavaScript is called the strict equality operator. It checks whether its two operands are
+      equal in both value and type.
+      <br><br>
+      For example, 9 === 9 is true, but "9" === 9 is false, because the string "9" is not the same type as the number 9.
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>how can the style/class of an element be changed ?</summary>
+
+    <p>by using document.getElementById Method We can channge css of an element.</p>
+    <code>document.getElementById("elementName").style.color = "hotpink";
+    </code>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>how to read and write a file using java script ?</summary>
+
+    <p></p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what are all the looping structure in java script ?</summary>
+
+
+
+    <p>
+      Looping structures are ways of repeating a block of code based on a condition. JavaScript supports different kinds
+      of loops, such as:
+
+      <br><br>
+
+      for loop: This loop executes a block of code a fixed number of times, or until a specified condition is false. It
+      has three expressions: initialization, testing, and increment/decrement. For example:
+
+      <br><br>
+
+      <code>
+      <pre>
+      // This loop prints the numbers from 1 to 10
+    
+      for (let i = 1; i &lt;= 10; i++) { 
+        console.log(i); 
+      } 
+      </pre>
+      </code>
+
+      <br>
+
+      while loop: This loop executes a block of code as long as a specified condition is true. It has only one
+      expression: testing. For example:
+      <br><br>
+      <code>
+        <pre>
+          // This loop prints the numbers from 1 to 10 
+
+          let i=1; while (i&lt;=10)
+          { 
+            console.log(i); i++; 
+          }
+        </pre>
+      </code>
+
+      <br>
+
+
+      do…while loop: This loop
+      is similar to the while loop, but it executes the block of code at least once before checking the condition. It
+      has two expressions: testing and body. For example:
+      <br><br>
+
+      <code>
+        <pre>
+          // This loop prints the numbers from 1 to 10 
+
+          let i=1; 
+          
+          do { 
+            console.log(i); i++; 
+          } while (i &lt;=10);
+          
+        </pre>
+      </code>
+
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+
+
+  <details>
+
+    <summary>how can you convert the string of any base to an integer in java script ?</summary>
+
+
+    <p>so there are three methods of converting string to number <br><br>
+      1. Number() <br> 2. parseInt() <br> 3. parseFloat() <br><br>
+
+      for example --- <br><br>
+
+      Number("9"); <br>
+      parseInt("12"); <br>
+      parseFloat("21"); <br>
+
+    </p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is the function of the delete operator ?</summary>
+
+    <p></p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what are all types of pop up boxes available in java script ?</summary>
+
+    <p>There are three types of pop-up boxes in JavaScript: alert, confirm, and prompt.
+    
+    <br><br>
+
+    Alert box: It shows a message and an OK button. The user has to click OK to proceed. <br><br>
+    alert ("message");
+
+    <br><br><br>
+
+    Confirm box: It shows a message and OK and Cancel buttons. The user can choose either option to proceed. The box
+    returns true if OK is clicked, and false if Cancel is clicked.<br><br>
+
+    confirm ("message");
+
+    <br><br><br>
+
+    Prompt box: It shows a message and a text input field. The user can enter a value and click OK or Cancel to proceed. The box returns the entered value if OK is clicked, and null if Cancel is clicked.<br><br> 
+
+    prompt("message", "default value");</p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what is use of void(0) ?</summary>
+
+    <p></p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>how can a page be forced to lead another page in java script ?</summary>
+
+    <p></p>
+
+  </details>
+
+  <hr>
+
+
+
+  <details>
+
+    <summary>what are the disadvantages of using innerHTML in java script ?</summary>
+
+    <p></p>
+
+  </details>
+
+  <hr>
+
+
+  
+
+</body>
+
+</html>
