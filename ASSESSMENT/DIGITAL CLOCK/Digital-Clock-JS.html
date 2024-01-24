@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital-Clock JS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Audiowide&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color-scheme: dark;
+      font-size: 1.5rem;
+      font-family: 'Audiowide', cursive;
+    }
+
+    #dmdy,
+    #digitalclock {
+      width: 54%;
+      margin-block: 3.6rem;
+      padding-block: 1.29rem;
+      text-align: center;
+      margin-inline: auto;
+    }
+
+    #dmdy {
+      border: 9px solid blueviolet;
+      outline: 6px solid green;
+      border-radius: 1rem;
+      background-image: linear-gradient(180deg, pink, royalblue, crimson);
+    }
+
+    #digitalclock {
+      border: 9px solid;
+      border-image: linear-gradient(135deg, aquamarine, blueviolet, deeppink) 9;
+      font-size: 3rem;
+      padding-block: 0.27rem;
+      background-image: linear-gradient(135deg, aquamarine, blueviolet, deeppink);
+      background-clip: text;
+      color: transparent;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div id="dmdy"></div>          <!--MAKING EMPTY ELEMENT FOR DATE-->
+
+  <div id="digitalclock">---00 : 00 : 00---</div>     <!--MAKING EMPTY ELEMENT FOR DIGITAL CLOCK-->
+
+  <script src="DigitalClock.js"></script>
+
+</body>
+</html>
