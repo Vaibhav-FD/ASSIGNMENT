@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY-QUESTIONS</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color-scheme: dark;
+      list-style: none;
+      margin-left: 0.6rem;
+      text-transform: capitalize;
+    }
+    summary{
+      font-size: 2rem;
+      margin-block: 2rem;
+    }
+    hr{
+        margin: 0;
+        background-color: deeppink;
+        height: 1vh;
+        margin-top: 1rem;
+    }
+    p{
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+
+<body>
+
+
+  <details>
+
+    <summary>what is JQUERY ?</summary>
+
+    <p>jQuery is an open source JavaScript library that simplifies the interactions between an HTML/CSS document <br><br>The purpose of jQuery is to make it much easier to use JavaScript on your website. <br><br>jQuery is a lightweight, "write less, do more", JavaScript library.</p>
+
+  </details>
+
+  <hr>
+
+  <details>
+
+    <summary>how to apply css using JQuery , how to add class and remove class in JQuery , JQuery Animation ?</summary>
+
+    <p>
+
+    To apply CSS properties to an element using jQuery, you can use the css() method. For example, you can change the color of a paragraph to pink by using:
+    <br><br>
+  
+    $("p").css("color", "pink");
+    $("p").css(color : "pink");
+
+    <br><br><br>
+     
+    To add or remove a CSS class to an element using jQuery, you can use the addClass() and removeClass() methods. These methods can add or remove one or more classes from the selected elements. For example, you can add a class named “test” to a div by using: <br><br>
+      
+    $("div").addClass("test");
+     
+    <br><br><br>
+    
+    To create animations using jQuery, you can use the animate() method. This method can animate the CSS properties of the selected elements over a specified duration. For example, you can animate the width of a div to 912 pixels by using:
+    <br><br>
+      
+    $("div").animate({width: "912px"});</p>
+
+  </details>
+
+  <hr>
+
+  <details>
+
+    <summary>How to create slider with animation ?</summary>
+
+    <p>
+    The “silder” is a basic jQuery plugin that allows you to create animated image slider. You just need to place your images in slider’s HTML structure. After that, plugin render a beautiful fullscreen animated image slider with next previous buttons. Moreover, it can be also customized with additional CSS according to your needs.</p>
+
+  </details>
+  
+</body>
+</html>
