@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TO DO LIST JS</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+      color-scheme: dark;
+      font-size: 1.29rem;
+      text-align: center;
+    }
+
+    ::placeholder{
+      color: aquamarine;
+      padding-left: 0.09rem;
+    }
+    
+    input{
+      width: 39%;
+      padding-block: 0.81rem;
+      text-align: left;
+      margin-top: 2.7rem;
+      padding-inline: 0.90rem;
+      transition: box-shadow 210ms ease-in-out 21ms;
+    }
+
+    input:focus{
+      outline: 3px solid whitesmoke;
+      box-shadow: 0px 0px 54px aqua;
+    }
+
+    button{
+      padding: 0.81rem 1.9rem;
+      margin-left: 2.1rem;
+      color: red;
+      font-weight: 609;
+      border: 6px solid blueviolet;
+      border-radius: 0.54rem;
+      margin-top: 2.7rem;
+      background-color: blanchedalmond;
+      box-shadow: 0px 0.9rem 1px grey;
+      transition-property: box-shadow , color , border;
+      transition-duration: 81ms;
+      transition-timing-function: linear;
+    }
+
+    button:active{
+      color: green;
+      box-shadow: 0px 0.36rem 1px grey;
+      border: 6px solid blue;
+    }
+    
+    #todolist{
+      width: 54%;
+      padding-block: 0.81rem;
+      margin-inline: auto;
+    }
+
+    p::before{
+      content: "✶ ";
+    }
+    p::after{
+      content: ".";
+    }
+
+    p{
+      text-align: left;
+      padding-inline: 1.29rem;
+      margin-block: 0.5rem;
+      text-transform: capitalize;
+      font-size: 1.5rem;
+    } 
+
+    b{
+      display: block;
+      margin-block: 3.6rem 2.1rem;
+      word-spacing: 0.69rem;
+    }
+    b :first-child,b :last-child{
+      color: burlywood;
+      font-size: 2rem;
+    }
+    b>:nth-child(2){
+      text-decoration: underline 3px dashed red;
+      text-underline-offset: 12px;
+    }
+   
+  </style>
+</head>
+<body>
+
+  <input type="text" name="Field" id="Field" placeholder="Enter Your Task">
+  
+  <button type="button" onclick="LIST()">ADD </button>     <!--GIVING ONCLICK EVENT TO BUTTON SO THAT IT CAN RUN FUNCTION-->
+
+  <b><span>---------</span> <span>⇛ YOUR TO DO LIST ⇚</span> <span>---------</span></b>
+
+  <div id="todolist"></div>    <!-- THIS IS DIV FOR DISPLAY TO DO LIST-->
+
+
+  <script src="ScriptTODO.js"></script>
+  
+</body>
+</html>

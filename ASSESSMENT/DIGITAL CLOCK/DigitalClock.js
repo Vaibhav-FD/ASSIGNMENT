@@ -1,4 +1,4 @@
-const DATE = new Date();      //CREATING new Date() OBJECT
+let DATE = new Date();      //CREATING new Date() OBJECT
 
 const DAYS = ['SUNDAY', 'MONDAY', 'TUESDAY', 'WEDNESDAY', 'THRUSDAY', 'FRIDAY', 'SATURDAY'];           //CREATING ARRAY FOR DAYS WHICH HAS NAME OF DAYS
 
@@ -10,9 +10,9 @@ document.getElementById("dmdy").innerHTML = DAYS[DATE.getDay()] + "&nbsp , &nbsp
 
 
 setInterval(function () {    //USING INTERVAL TO CHANGE LIVE TIME
-
+  
   let CLOCK = new Date();
-
+  
   document.getElementById("digitalclock").innerHTML = " --- " + CLOCK.getHours() + " : " + CLOCK.getMinutes() + " : " + CLOCK.getSeconds() + " --- ";    //  PRINTING WITH innerHTML HOUR : MINUTE : SECOND
-
+  
 }, 1000);
