@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SLIDER JS</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      color-scheme: dark;
+    }
+
+    #slider {
+      width: 39%;
+      height: 54vh;
+      margin-top: 3.9rem;
+      border: 3px solid white;
+      box-shadow: 0px 0px 54px deeppink;
+      border-radius: 1rem;
+      transition: transform 609ms linear 21ms, box-shadow 609ms linear 21ms;
+
+    }
+
+    #slider:hover {
+      transform: scale(1.2);
+      box-shadow: 0px 0px 54px aqua;
+    }
+
+    #preimg,
+    #nextimg {
+      border: 5px solid blueviolet;
+      width: 18%;
+      height: 36vh;
+      border-radius: 1rem;
+      box-shadow: 0px 0px 21px white;
+      transform: rotate(9deg);
+      transition: transform 309ms ease-in-out 9ms;
+    }
+
+    #preimg:hover,
+    #nextimg:hover {
+      transform: rotate(-9deg);
+    }
+
+    button {
+      text-align: center;
+      font-size: 3rem;
+      color: black;
+      background-color: pink;
+      margin-inline: 9.12%;
+      margin-top: 3rem;
+      padding-inline: 1.29rem;
+      border-radius: 1.29rem;
+      box-shadow: 0px 15px grey;
+      transition: box-shadow 54ms ease-in;
+      border: 5px solid limegreen;
+    }
+
+    button:active {
+      box-shadow: 0px 6px grey;
+    }
+
+
+    .btn {
+      text-align: center;
+      margin-top: 3.9rem;
+    }
+
+    .img {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="img">
+
+    <img src="" alt="" id="preimg">
+
+    <img src="" alt="" id="slider">
+
+    <img src="" alt="" id="nextimg">
+
+  </div>
+
+  <div class="btn">
+    <button type="button" onclick="PREVIOUS()">⇚</button>
+    <button type="button" onclick="NEXT()">⇛</button>
+  </div>
+
+
+
+  <script>
+
+
+    const IMAGES = ["SLIDER---IMAGES/HOMEIMG.jpg",
+      "SLIDER---IMAGES/IMG2.jpg",
+      "SLIDER---IMAGES/IMG3.jpg",
+      "SLIDER---IMAGES/IMG4.jpg",
+      "SLIDER---IMAGES/IMG5.jpg",
+      "SLIDER---IMAGES/IMG6.jpg",
+    ];
+
+
+    document.getElementById("preimg").src = IMAGES[IMAGES.length - 1];
+
+    document.getElementById("slider").src = IMAGES[0];
+
+    document.getElementById("nextimg").src = IMAGES[1];
+
+
+    let COUNT = 0;
+
+
+    function NEXT() {
+
+      console.log(COUNT);
+
+      if (COUNT == IMAGES.length - 1) {
+        COUNT = -1;
+      }
+
+      COUNT++;
+      console.log(COUNT);
+
+      document.getElementById("slider").src = IMAGES[COUNT];
+
+      if (COUNT == 0) {
+        document.getElementById("preimg").src = IMAGES[5];
+
+      } else {
+        document.getElementById("preimg").src = IMAGES[COUNT - 1]
+      }
+
+
+      if (COUNT == 5) {
+        document.getElementById("nextimg").src = IMAGES[0];
+
+      } else {
+        document.getElementById("nextimg").src = IMAGES[COUNT + 1];
+      }
+
+
+      // console.log(COUNT + " = " + IMAGES[COUNT]);
+
+    }
+
+
+
+    function PREVIOUS() {
+
+      console.log(COUNT);
+
+      COUNT--;
+
+      if (COUNT == -1) {
+        COUNT = IMAGES.length - 1;
+      }
+
+
+      document.getElementById("nextimg").src = IMAGES[COUNT + 1];
+      document.getElementById("slider").src = IMAGES[COUNT];
+
+
+      document.getElementById("preimg").src = IMAGES[COUNT - 1];
+
+
+      // console.log(COUNT + " = " + IMAGES[COUNT]);
+
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>
