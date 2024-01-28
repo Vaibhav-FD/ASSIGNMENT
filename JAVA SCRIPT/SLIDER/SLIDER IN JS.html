@@ -45,24 +45,23 @@
       transform: rotate(-9deg);
     }
 
+
     button {
-      text-align: center;
-      font-size: 3rem;
-      color: black;
-      background-color: pink;
-      margin-inline: 9.12%;
-      margin-top: 3rem;
-      padding-inline: 1.29rem;
-      border-radius: 1.29rem;
-      box-shadow: 0px 15px grey;
-      transition: box-shadow 54ms ease-in;
-      border: 5px solid limegreen;
+      padding: 0.39rem 2.1rem;
+      font-weight: bold;
+      color: white;
+      background: #222;
+      cursor: pointer;
+      border: none;
+      position: relative;
+      font-size: 2.7rem;
+      margin-inline: 3.9rem;
+      margin-top: 3.9rem;
     }
 
-    button:active {
-      box-shadow: 0px 6px grey;
+    button:hover {
+      box-shadow: 0px 0px 6px limegreen, 0px 0px 39px bisque, 0px 0px 90px purple;
     }
-
 
     .btn {
       text-align: center;
@@ -81,17 +80,17 @@
 
   <div class="img">
 
-    <img src="" alt="" id="preimg">
+    <img src="" alt="" id="preimg">           <!-- PREVIOIUS IMAGE -->
 
-    <img src="" alt="" id="slider">
+    <img src="" alt="" id="slider">           <!-- MAIN IMAGE -->
 
-    <img src="" alt="" id="nextimg">
+    <img src="" alt="" id="nextimg">          <!-- UPCOMING OR NEXT IMAGE -->
 
   </div>
 
   <div class="btn">
-    <button type="button" onclick="PREVIOUS()">⇚</button>
-    <button type="button" onclick="NEXT()">⇛</button>
+    <button type="button" onclick="PREVIOUS()">⇚</button>      <!-- USING ONCLICK ON BUTTON FOR PREVIOUS IMAGE --> 
+    <button type="button" onclick="NEXT()">⇛</button>   <!-- USING ONCLICK ON BUTTON FOR NEXT IMAGE --> 
   </div>
 
 
@@ -105,41 +104,46 @@
       "SLIDER---IMAGES/IMG4.jpg",
       "SLIDER---IMAGES/IMG5.jpg",
       "SLIDER---IMAGES/IMG6.jpg",
-    ];
+    ];                       //CREATING ARRAY AND STORING FILE LOCATION OR PATH
 
 
-    document.getElementById("preimg").src = IMAGES[IMAGES.length - 1];
+    document.getElementById("preimg").src = IMAGES[IMAGES.length - 1];        // DEFUALT PREVIOUIS IMAGE
 
-    document.getElementById("slider").src = IMAGES[0];
+    document.getElementById("slider").src = IMAGES[0];    // DEFAULT FIRST MAIN IMAGE
 
-    document.getElementById("nextimg").src = IMAGES[1];
+    document.getElementById("nextimg").src = IMAGES[1];     // DEFAULT NEXT IMAGE
 
 
-    let COUNT = 0;
+    let COUNT = 0;             
 
 
     function NEXT() {
 
-      console.log(COUNT);
+      // console.log(COUNT);                  // FOR DEBUGGING
+
 
       if (COUNT == IMAGES.length - 1) {
         COUNT = -1;
-      }
+      }                       // WHEN SLIDER REACH END POINT IT WILL START FROM BEGGINING
 
       COUNT++;
-      console.log(COUNT);
+
+      // console.log(COUNT);              // FOR DEBUGGING
+
 
       document.getElementById("slider").src = IMAGES[COUNT];
 
+
       if (COUNT == 0) {
-        document.getElementById("preimg").src = IMAGES[5];
+        document.getElementById("preimg").src = IMAGES[IMAGES.length - 1];
 
       } else {
         document.getElementById("preimg").src = IMAGES[COUNT - 1]
       }
 
+      // CONDITION FOR NEXT AND PERVIOUS ERROR
 
-      if (COUNT == 5) {
+      if (COUNT == IMAGES.length - 1) {
         document.getElementById("nextimg").src = IMAGES[0];
 
       } else {
@@ -147,34 +151,47 @@
       }
 
 
-      // console.log(COUNT + " = " + IMAGES[COUNT]);
-
+      // console.log(COUNT + " = " + IMAGES[COUNT]);             // FOR DEBUGGING
     }
 
 
 
     function PREVIOUS() {
 
-      console.log(COUNT);
+      // console.log(COUNT);            // FOR DEBUGGING
 
       COUNT--;
 
       if (COUNT == -1) {
         COUNT = IMAGES.length - 1;
-      }
+      }                  // WHEN SLIDER REACH END POINT IT WILL START FROM BEGGINING
+
+      // console.log(COUNT);      // FOR DEBUGGING
 
 
-      document.getElementById("nextimg").src = IMAGES[COUNT + 1];
       document.getElementById("slider").src = IMAGES[COUNT];
 
 
-      document.getElementById("preimg").src = IMAGES[COUNT - 1];
+      if (COUNT == 0) {
+        document.getElementById("preimg").src = IMAGES[IMAGES.length - 1];
+
+      } else {
+        document.getElementById("preimg").src = IMAGES[COUNT - 1]
+      }
+
+      // CONDITION FOR NEXT AND PERVIOUS ERROR
 
 
-      // console.log(COUNT + " = " + IMAGES[COUNT]);
+      if (COUNT == IMAGES.length - 1) {
+        document.getElementById("nextimg").src = IMAGES[0];
+
+      } else {
+        document.getElementById("nextimg").src = IMAGES[COUNT + 1];
+      }
+
+      // console.log(COUNT + " = " + IMAGES[COUNT]);       // FOR DEBUGGING
 
     }
-
 
 
   </script>
