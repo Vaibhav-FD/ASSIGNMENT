@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS PROJECT</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            color-scheme: dark;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .heading {
+            text-align: center;
+            font-size: 1.02rem;
+            letter-spacing: 0.21rem;
+            word-spacing: 0.39rem;
+            padding: 1.2rem;
+        }
+
+        .heading>h1 {
+            -webkit-text-stroke: 1px yellow;
+            color: transparent;
+            text-shadow: 0px 0px 21px white;
+        }
+
+
+        .tasks>table {
+            margin-block: 3.6rem;
+            margin-inline: auto;
+            border-collapse: collapse;
+        }
+
+
+        .tasks>table th {
+            font-family: 'Courier New', Courier, monospace;
+            border: 2px solid blueviolet;
+            font-size: 1.5rem;
+            padding: 1rem 2.7rem;
+            box-shadow: 0px 0px 12px blueviolet;
+            letter-spacing: 1px;
+        }
+
+        .addbutton button {
+            background-color: #4f79f5;
+            color: white;
+            font-size: 3.9rem;
+            border-radius: 50%;
+            width: 5%;
+            position: fixed;
+            right: 2%;
+            bottom: 4%;
+            border: 3px solid white;
+            box-shadow: 0px 0px 9px whitesmoke;
+            transition-duration: 270ms;
+        }
+
+        .addbutton button:hover {
+            background-color: #00f94f;
+            color: black;
+        }
+
+        .tasks>table td {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            border: 2px solid darkcyan;
+            font-size: 1.29rem;
+            padding: 1rem 2.7rem;
+            box-shadow: 0px 0px 12px darkcyan;
+        }
+
+
+        .tasks>table>tbody button {
+            padding: 0.39rem 1.29rem;
+            font-size: 1.09rem;
+            border-radius: 0.21rem;
+            border: none;
+            background-color: #c9c9c9;
+            color: black;
+            font-weight: 609;
+        }
+
+        .tasks>table>tbody>tr>:first-child {
+            text-transform: capitalize;
+        }
+
+        .tasks>table>tbody [type="checkbox"] {
+            display: block;
+            margin-inline: auto;
+            height: 27px;
+            width: 27px;
+            accent-color: #3fcf3f;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="heading">
+        <h1>JavaScript Project --- [ CRUD ] ---</h1>
+    </div>
+
+
+
+    <div class="tasks">
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Your Tasks</th>
+                    <th>Priority Level</th>
+                    <th>Update</th>
+                    <th>Delete</th>
+                    <th>Check</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+
+            <tbody></tbody>
+        </table>
+
+    </div>
+
+
+    <div class="addbutton">
+        <button type="button" title="ADD NEW TASK">+</button>
+    </div>
+
+
+
+
+
+    <script>
+
+        const addTaskBtn = document.querySelector('.addbutton>button');
+
+        addTaskBtn.addEventListener('click', addTask);
+
+
+
+
+
+
+        function addTask() {
+
+            const userTask = prompt('Enter Your Task');
+
+            const userTaskPriority = confirm('Is This Task Have High Priority ?');
+
+
+            const taskTR = ` <tr>
+                                <td>${userTask}.</td>
+                                <td>${userTaskPriority ? 'High' : 'Low'}</td>
+                                <td><button type="button" title="EDIT YOUR TASK" onclick="editTask()" class="editusertask">Edit</button></td>
+                                <td><button type="button" title="DELETE YOUR TASK" onclick="deleteTask()">Delete</button></td>
+                                <td><input type="checkbox" onclick="checkTask()"></td>
+                                <td>PENDING...</td>
+                            </tr>`;
+
+
+            const allTasks = document.querySelector('.tasks>table>tbody');
+
+
+            allTasks.innerHTML += taskTR;
+
+
+        }
+
+
+
+
+
+
+        function checkTask() {
+
+            const btnParent = event.target.parentElement;
+
+            btnParent.parentElement.style.pointerEvents = 'none';
+            btnParent.parentElement.style.userSelect = 'none';
+
+
+            btnParent.nextElementSibling.innerText = 'COMPLETED ✓';
+
+
+            btnParent.parentElement.firstElementChild.style.textDecoration = 'line-through 2px solid crimson';
+
+        }
+
+
+
+
+
+
+        function editTask() {
+
+            const btnParent = event.target.parentElement.parentElement;
+
+            btnParent.firstElementChild.innerText = prompt('Change Your Task') + '.';
+
+
+            btnParent.firstElementChild.nextElementSibling.innerText = confirm('Is This Task Have High Priority ?')?'High':'Low';
+
+
+        }
+
+
+
+
+
+
+        function deleteTask(){
+
+            event.target.parentElement.parentElement.remove();
+
+        }
+
+
+    </script>
+
+
+</body>
+
+</html>
