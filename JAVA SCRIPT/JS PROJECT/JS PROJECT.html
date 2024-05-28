@@ -94,6 +94,25 @@
             width: 27px;
             accent-color: #3fcf3f;
         }
+
+        .menubutton {
+            position: fixed;
+            left: 2%;
+            bottom: 4%;
+        }
+
+        .menubutton>button {
+            font-size: 1.29rem;
+            padding: 0.54rem 0.9rem;
+            border-radius: 0.9rem;
+            border: none;
+            background-color: orange;
+            color: black;
+            list-style-type: none;
+        }
+
+       
+
     </style>
 </head>
 
@@ -130,6 +149,11 @@
     </div>
 
 
+    <div class="menubutton">
+        <button type="button" title="SHOW HIGH LEVEL TASK IN RED AND LOW IN GREEN"> Show High And Low</button>
+    </div>
+
+
 
 
 
@@ -139,7 +163,7 @@
 
         addTaskBtn.addEventListener('click', addTask);
 
-
+        const showTaskPrority = document.querySelector('.menubutton>button');
 
 
 
@@ -201,7 +225,7 @@
             btnParent.firstElementChild.innerText = prompt('Change Your Task') + '.';
 
 
-            btnParent.firstElementChild.nextElementSibling.innerText = confirm('Is This Task Have High Priority ?')?'High':'Low';
+            btnParent.firstElementChild.nextElementSibling.innerText = confirm('Is This Task Have High Priority ?') ? 'High' : 'Low';
 
 
         }
@@ -211,11 +235,46 @@
 
 
 
-        function deleteTask(){
+        function deleteTask() {
 
             event.target.parentElement.parentElement.remove();
 
         }
+
+
+
+
+
+
+
+        showTaskPrority.addEventListener('click', () => {
+
+            const tasks = document.querySelectorAll('.tasks>table tbody>tr>:first-child');
+
+
+            for (const i of tasks) {
+
+                (i.nextElementSibling.innerText === 'High')
+                ?
+                    i.style.backgroundColor = '#f63939'
+                :
+                    i.style.backgroundColor = 'limegreen';
+
+
+            }
+
+        })
+
+
+
+
+
+
+
+
+
+
+
 
 
     </script>
