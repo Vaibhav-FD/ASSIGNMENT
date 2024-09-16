@@ -237,7 +237,9 @@
 
         function deleteTask() {
 
-            event.target.parentElement.parentElement.remove();
+            if (confirm('Are You Sure You Want To Delete This Task Becuase After Deleting You Will Not Be Able To Undo It.')) {
+                event.target.parentElement.parentElement.remove();   
+            }
 
         }
 

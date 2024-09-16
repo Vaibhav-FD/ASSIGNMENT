@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+    background-color: #090909;
+    color: #f9f9f9;
+    font-family: Helvetica, sans-serif;
+    font-size: 1.29rem;
+}
+
+h1,h2{
+    text-align: center;
+    margin-block: 1.9rem;
+    font-size: 2.7rem;
+    font-weight: 300;
+}
+
+.helloworld{
+    background-color: #212121;
+    text-align: center;
+    color: #1ec7c7;
+}
+
+.helloworld>svg+p{
+    background-color: #1ec7c7;
+    color: black;
+    padding: 1rem;
+    font-size: 2rem;
+}
+
+
+summary{
+    list-style-type: none;
+    padding: 0.6em;
+    background-color: #212121;
+    border: 1px solid darkcyan;
+    margin-bottom: 0.39em;
+}
+
+summary+p{
+    background-color: #181818;
+    padding: 0.6em;
+    margin-bottom: 0.69em;
+}
+
+hr{
+    margin-block: 6rem;
+}
+
+.counter {
+    height: 90vh;
+    background-color: rgb(28, 65, 177);
+    display: grid;
+    place-items: center;
+}
+
+.counter p{
+    font-size: 2rem;
+    text-align: center;
+}
+
+.counter p+b{
+    display: block;
+    text-align: center;
+    margin-block: 1.5rem;
+}
+
+.counter button{
+    background-color: rgb(54, 53, 53);
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+}
+
+.counterbtns>:first-child{
+    margin-right: 2rem;
+}
+
+
+.counterbtns+button{
+    display: block;
+    margin-top: 1rem;
+    margin-inline: auto;
+}
+
+
+
+.todoapp>u{
+    display: block;
+    margin-bottom: 3.5rem;
+}
+
+.todoapp{
+    width: 400px;
+    margin-inline: auto;
+    text-align: center;
+    padding: 2.5rem;
+    background-color: rgb(13, 13, 30);
+    border: 3px solid transparent;
+    border-image: linear-gradient(125deg,darkcyan,royalblue) 9;
+    margin-bottom: 3rem;
+}
+
+
+.todolists{
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    padding: .5rem;
+}
+
+.todolists>button{
+    padding: 0.5rem;
+}
+
+.todolists>p+button{
+    margin-inline: 1.5rem;
+}
+
+.todolists>p{
+    flex-grow: 1;
+    background-image: linear-gradient(120deg,royalblue,blueviolet);
+    text-align: left;
+    padding: 0.5rem;
+    border-radius: 0.15rem;
+}
+
+.todoapp>u+input{
+    padding: 0.5rem 2rem;
+    font-size: 1rem;
+}
+
+.todoapp>u~button{
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+
+
+
