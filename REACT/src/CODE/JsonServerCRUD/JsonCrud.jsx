@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import './App.css'
 
 
 
-export default function App() {
+export default function JsonServerCrud() {
 
   const [data, setData] = useState([]);
   const [value, setValue] = useState('');
@@ -89,7 +88,7 @@ export default function App() {
     setData(data.map((obj) =>
       obj.id === updatedTask.id ? updatedTask : obj
     ));
-    
+
     setEditable(false);
     setValue('');
 
@@ -110,42 +109,47 @@ export default function App() {
 
   return (
     <>
-      <h2>JSON SERVER CRUD</h2>
+      <div className="jsoncrud">
+        <h2>--- React Module ---JSON SERVER CRUD---</h2>
 
-      <input type="text" value={value} onChange={(e) => {
-        setValue(e.target.value);
-      }} />
-
-
-
-
-      {
-        (editable) ?
-          <button onClick={handleSave}>Save</button> :
-          <button onClick={handleAdd} >Add</button>
-      }
+        <input type="text" value={value} onChange={(e) => {
+          setValue(e.target.value);
+        }} />
 
 
 
-      <ul>
-        {data.map((obj) => (
 
-          <div key={obj.id} className='task'>
+        {
+          (editable) ?
+            <button onClick={handleSave}>Save</button> :
+            <button onClick={handleAdd} >Add</button>
+        }
 
-            <p>{obj.task}</p>
 
-            <button onClick={() => {
-              handleDelete(obj.id);
-            }}>Delete</button>
 
-            <button onClick={() => {
-              handleEdit(obj);
-            }}>Edit</button>
+        <div>
+          {data.map((obj) => (
 
-          </div>
+            <div key={obj.id} className='jsoncrudlist'>
 
-        ))}
-      </ul>
+              <p>{obj.task}</p>
+
+              <button onClick={() => {
+                handleDelete(obj.id);
+              }}>Delete</button>
+
+              <button onClick={() => {
+                handleEdit(obj);
+              }}>Edit</button>
+
+            </div>
+
+          ))}
+        </div>
+
+      </div>
+
+      <hr />
 
     </>
   )

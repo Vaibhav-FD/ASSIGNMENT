@@ -1,12 +1,12 @@
 import React from 'react'
 import './App.css'
 
-import ReactQuestions from './JSX CODE/ReactQuestions.jsx'
-import ReactCounter from './JSX CODE/ReactCounter.jsx'
-import ToDoList from './JSX CODE/ToDoList.jsx'
-import TodoList from './JSX CODE/ToDoList.jsx'
-import CursorFollow from './JSX CODE/CursorFollow.jsx'
-import HelloWorld from './JSX CODE/HelloWorld.jsx'
+import ReactQuestions from './CODE/ReactQuestions.jsx'
+import ReactCounter from './CODE/ReactCounter.jsx'
+import TodoList from './CODE/ToDoList.jsx'
+import CursorFollow from './CODE/CursorFollow.jsx'
+import HelloWorld from './CODE/HelloWorld.jsx'
+import JsonServerCrud from './CODE/JsonServerCRUD/JsonCrud.jsx'
 
 
 
@@ -20,6 +20,7 @@ function ReactModule() {
       <ReactCounter />
       <CursorFollow />
       <TodoList />
+      <JsonServerCrud />
     </>
   )
 }
